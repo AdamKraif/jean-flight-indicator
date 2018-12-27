@@ -1,7 +1,7 @@
 define(["Inheritance", "IndicatorBase", "text!altitude-html"], function (Inheritance, IndicatorBase, html) { // jscs:ignore
     /**
      * Provides functionality for displaying altitude values
-     * @alias AltitudeIndicator 
+     * @alias AltitudeIndicator
      * @constructor
      * @extends IndicatorBase
      * @param {Object} options - options object
@@ -31,7 +31,7 @@ define(["Inheritance", "IndicatorBase", "text!altitude-html"], function (Inherit
     /** @param {Number} feet - range from 0ft to 99.999ft */
     AltitudeIndicator.prototype.update = function (feet) {
         if (this.isReady) {
-            feet = feet > 100000 ? 100000 : feet;
+            feet = feet > 500 ? 500 : feet;
             feet = feet < 0 ? 0 : feet;
 
             var box = this.hundredNeedle.getBBox();
