@@ -23,9 +23,9 @@ define(["Inheritance", "IndicatorBase", "text!altitude-html"], function (Inherit
                 instance.tenthousandNeedle.setAttribute("transform", "");
             }
         });
-        this.degreePerHundredFeet = 360 / 1000;
-        this.degreePerThousandFeet = 360 / 10000;
-        this.degreePerTenthousandFeet = 360 / 100000;
+        this.degreePerHundredFeet = 360 / 500;
+        this.degreePerThousandFeet = 360 / 5000;
+        this.degreePerTenthousandFeet = 360 / 50000;
     };
     Inheritance.inheritPrototype(AltitudeIndicator, IndicatorBase);
     /** @param {Number} feet - range from 0ft to 99.999ft */
